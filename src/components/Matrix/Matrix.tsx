@@ -47,7 +47,8 @@ export default function Matrix() {
 
       // ctx.fillStyle = '#0f0';
       ctx.fillStyle = '#CFFD80';
-      ctx.font = '15pt monospace';
+      
+    w > 700 ? (ctx.font = '15pt monospace') : (ctx.font = '12pt monospace');
     }
 
     ypos.forEach((y, ind) => {

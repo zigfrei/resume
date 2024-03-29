@@ -31,12 +31,14 @@
 }
 
 .titleWrapper {
+    margin: 10px;
     background-color: var(--color-black-overlay);
     width: 500px;
     border: 1px dashed var(--color-text-green);
 }
 
 .title {
+    text-wrap: balance;
     text-align: center;
     margin: 0;
     padding: 30px 30px 5px 30px;
@@ -48,6 +50,7 @@
 }
 
 .subTitle {
+    text-wrap: balance;
     text-align: center;
     margin: 0;
     padding: 0px;
@@ -59,5 +62,15 @@
     padding-bottom: 30px;
 }
 
-/* @media (max-width: 520px) {
-} */
+@media (max-width: 700px) {
+    .title {
+        font-size: 26px;
+        padding: 20px 10px 5px 10px;
+
+    }
+
+    .subTitle {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+}
