@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Handjet, Press_Start_2P } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const handjet = Handjet({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-handjet',
+});
+
+const press_start_2P = Press_Start_2P({
+  subsets: ['latin', 'cyrillic'],
+  variable: '--font-press_start_2P',
+  weight: "400"
+});
 
 export const metadata: Metadata = {
   title: "Резюме Ревазашвили Георгий",
@@ -15,8 +24,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ru">
+      <body className={`${handjet.variable} ${press_start_2P.variable}`}>{children}</body>
     </html>
   );
 }
