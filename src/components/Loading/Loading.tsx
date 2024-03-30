@@ -13,16 +13,28 @@ export default function Loading(props: TLoading): ReactElement {
   const [show, setShow] = useState(0)
   const [charIndex, setCharIndex] = useState<number>(0);
   const [lineNumber, setLineNumber] = useState<number>(0);
+  // const textArray = [
+  //   "Loading ...",
+  //   "Rendering a web page ...",
+  //   "Start to parse the HTML ...",
+  //   "Fetch external resources ...",
+  //   "Parse the CSS and build the CSSOM ...",
+  //   "Execute the JavaScript ...",
+  //   "Merge DOM and CSSOM to construct the render tree ...",
+  //   "Calculate layout and paint ...",
+  //   "Done",
+  // ];
+
   const textArray = [
-    "Loading ...",
-    "Rendering a web page ...",
-    "Start to parse the HTML ...",
-    "Fetch external resources ...",
-    "Parse the CSS and build the CSSOM ...",
-    "Execute the JavaScript ...",
-    "Merge DOM and CSSOM to construct the render tree ...",
-    "Calculate layout and paint ...",
-    "Done",
+    "Загрузка ...",
+    "Рендеринг веб-страницы ...",
+    "Начать парсинг HTML кода и создание DOM ...",
+    "Извлечь внешние ресурсы ...",
+    "Начать парсинг CSS кода и создать CSSOM ...",
+    "Выполнить JavaScript код ...",
+    "Объединить DOM и CSSOM для построения дерева рендеринга ...",
+    "Рассчитать макет и раскрасить ...",
+    "Готово",
   ];
 
   const typingDelay = 50;
@@ -173,14 +185,14 @@ export default function Loading(props: TLoading): ReactElement {
 
   return (
     <section className={`${styles.section} ${props.loading ? styles.loading : ''}`}>
-      {lineNumber > 0 && <p className={styles.text}>Loading ...</p>}
-      {lineNumber > 1 && <p className={styles.text}>Rendering a web page ...</p>}
-      {lineNumber > 2 && <p className={styles.text}>Start to parse the HTML ...</p>}
-      {lineNumber > 3 && <p className={styles.text}>Fetch external resources ...</p>}
-      {lineNumber > 4 && <p className={styles.text}>Parse the CSS and build the CSSOM ...</p>}
-      {lineNumber > 5 && <p className={styles.text}>Execute the JavaScript ...</p>}
-      {lineNumber > 6 && <p className={styles.text}>Merge DOM and CSSOM to construct the render tree ...</p>}
-      {lineNumber > 7 && <p className={styles.text}>Calculate layout and paint ...</p>}
+      {lineNumber > 0 && <p className={styles.text}>{textArray[0]}</p>}
+      {lineNumber > 1 && <p className={styles.text}>{textArray[1]}</p>}
+      {lineNumber > 2 && <p className={styles.text}>{textArray[2]}</p>}
+      {lineNumber > 3 && <p className={styles.text}>{textArray[3]}</p>}
+      {lineNumber > 4 && <p className={styles.text}>{textArray[4]}</p>}
+      {lineNumber > 5 && <p className={styles.text}>{textArray[5]}</p>}
+      {lineNumber > 6 && <p className={styles.text}>{textArray[6]}</p>}
+      {lineNumber > 7 && <p className={styles.text}>{textArray[7]}</p>}
       {/* {lineNumber > 8 && <p className={styles.text}>Done</p>} */}
       <p className={styles.text}>{lineText}<span className={styles.cursor}>&nbsp;</span></p>
     </section>

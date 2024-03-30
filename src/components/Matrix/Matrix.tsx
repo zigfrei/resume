@@ -89,7 +89,7 @@ export default function Matrix(props: TMatrix): ReactElement  {
         <canvas width="500" height="200" id="canv" />
         <div onClick={handlePressAnyKey} className={styles.overlay}>
           <div className={styles.titleWrapper}>
-            <h1 className={styles.title}>Резюме Ревазашвили Георгия</h1>
+            <h1 className={styles.title}>Добро пожаловать.</h1>
             <h2 className={styles.subTitle}>Для продолжения нажмите любую клавишу ...</h2>
           </div>
         </div>
