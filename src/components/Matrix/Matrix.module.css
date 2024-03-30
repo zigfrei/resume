@@ -33,7 +33,8 @@
 .titleWrapper {
     margin: 10px;
     background-color: var(--color-black-overlay);
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     border: 1px dashed var(--color-text-green);
 }
 

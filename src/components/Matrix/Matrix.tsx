@@ -1,10 +1,13 @@
 "use client"
 import styles from './Matrix.module.css';
-import Image from 'next/image';
-import { FormEvent, useState, useCallback, ChangeEvent, HTMLAttributes, useEffect } from "react";
+import { useEffect, Dispatch, ReactElement, SetStateAction } from "react";
 
+type TMatrix = {
+  loading: null | boolean;
+  setLoading: Dispatch<SetStateAction<null | boolean>>
+};
 
-export default function Matrix() {
+export default function Matrix(props: TMatrix): ReactElement  {
 
   //Matrix code
   let canvas: any;
@@ -63,16 +66,15 @@ export default function Matrix() {
   setInterval(matrix, 50);
 
   //Regular code
-  const [loading, setLoading] = useState<null | boolean>(false);
 
   const handlePressAnyKey = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
     // const e = event.currentTarget;
-    setLoading(true);
+    props.setLoading(true);
   };
 
   useEffect(() => {
-    const keyDownHandler = (e: KeyboardEvent) => setLoading(true);
+    const keyDownHandler = (e: KeyboardEvent) => props.setLoading(true);
     document.addEventListener("keydown", keyDownHandler);
 
     // clean up
@@ -83,7 +85,7 @@ export default function Matrix() {
 
   return (
     <section className={styles.section}>
-      <div className={`${styles.overlayWrapper} ${loading ? styles.loading : ''}`}>
+      <div className={`${styles.overlayWrapper} ${props.loading ? styles.loading : ''}`}>
         <canvas width="500" height="200" id="canv" />
         <div onClick={handlePressAnyKey} className={styles.overlay}>
           <div className={styles.titleWrapper}>
