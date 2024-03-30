@@ -29,7 +29,6 @@ export default function Loading(props: TLoading): ReactElement {
   const newTextDelay = 1000; // Delay between current and next 
 
   function type() {
-    console.log(lineText, charIndex);
     if (charIndex < textArray[lineNumber].length) {
       setlineText(lineText + textArray[lineNumber][charIndex]);
       setCharIndex(charIndex + 1);
