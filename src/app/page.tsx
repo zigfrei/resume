@@ -12,6 +12,7 @@ export default function Home() {
   const [openMainView, setOpenMainView] = useState<null | boolean>(false);
   return (
     <div className={`${styles.page} ${openMainView ? styles.pageFullHeight : ''}`}>
+      <div className={styles.monitorCRTEffect} />
       <Matrix loading={loading} setLoading={setLoading} />
       <Loading loading={loading} setLoading={setLoading} setOpenMainView={setOpenMainView} />
       {openMainView && (<>

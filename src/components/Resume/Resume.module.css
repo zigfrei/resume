@@ -57,6 +57,7 @@
     font-size: 35px;
     font-weight: 400;
     font-family: var(--font-handjet);
+    text-shadow: var(--text-shadow-parametrs);
 }
 
 .middleSection {
@@ -131,6 +132,7 @@
     font-size: 26px;
     font-weight: 400;
     font-family: var(--font-handjet);
+    text-shadow: var(--text-shadow-parametrs);
 }
 
 .contactPointSubTitle {
@@ -143,6 +145,7 @@
     font-size: 20px;
     font-weight: 400;
     font-family: var(--font-handjet);
+    text-shadow: var(--text-shadow-parametrs);
 }
 
 .rightColumnWrapper {
@@ -184,6 +187,7 @@
     font-size: 30px;
     font-weight: 400;
     font-family: var(--font-handjet);
+    text-shadow: var(--text-shadow-parametrs);
 }
 
 .eduTextWrapper {
@@ -202,4 +206,5 @@
     font-size: 26px;
     font-weight: 400;
     font-family: var(--font-handjet);
+    text-shadow: var(--text-shadow-parametrs);
 }

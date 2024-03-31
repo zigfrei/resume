@@ -4,8 +4,14 @@
   --color-pure-lamp: #fefea6;
   --color-text-green: #cbfb83;
 
+  --main-background-gradient: radial-gradient(50% 50% at 50% 50%, #354228 0, #0f140a 100%);
+  --main-box-shadow-view: 0 0 2.8571428571rem #252925, inset 0 0 2rem 1.4285714286rem #000;
+
+  --text-shadow-parametrs: 0 0 0.1428571429rem #d0fc7e, 0 0 0.2857142857rem #d0fc7e;
+
   --layer-of-matrix-text: 2;
   --layer-of-header: 3;
+  --top-layer: 10;
   /* --layer-up-content: 2;
   --layer-of-popup: 4;
   --layer-of-popup-components: 5; */
@@ -21,7 +27,12 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  background-color: var(--color-black);
 }
+
+/* h1, h2, h3, h4, h5, p, span {
+  animation: text-effect 5s linear infinite;
+} */
 
 a {
   color: inherit;
@@ -32,4 +43,11 @@ a {
   html {
     color-scheme: dark;
   }
+} */
+
+/* @keyframes text-effect {
+50% {
+  text-shadow: 0 0 0.2857142857rem white, 0 0 0.5714285714rem white;
+  color: #c6fc7e;
+}
 } */
