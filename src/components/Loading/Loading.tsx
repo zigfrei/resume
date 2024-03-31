@@ -5,11 +5,11 @@ import { FormEvent, useState, useCallback, ChangeEvent, HTMLAttributes, useEffec
 type TLoading = {
   loading: null | boolean;
   setLoading: Dispatch<SetStateAction<null | boolean>>
+  setOpenMainView: Dispatch<SetStateAction<null | boolean>>
 };
 
 export default function Loading(props: TLoading): ReactElement {
   const [lineText, setlineText] = useState<string>("");
-  const [printedText, setPrintedText] = useState(0);
   const [show, setShow] = useState(0)
   const [charIndex, setCharIndex] = useState<number>(0);
   const [lineNumber, setLineNumber] = useState<number>(0);
@@ -35,10 +35,11 @@ export default function Loading(props: TLoading): ReactElement {
     "Объединить DOM и CSSOM для построения дерева рендеринга ...",
     "Рассчитать макет и раскрасить ...",
     "Готово",
+    ">",
   ];
 
   const typingDelay = 50;
-  const newTextDelay = 1000; // Delay between current and next 
+  const newTextDelay = 700; // Delay between current and next 
 
   function type() {
     if (charIndex < textArray[lineNumber].length) {
@@ -141,50 +142,74 @@ export default function Loading(props: TLoading): ReactElement {
     }
   }, [lineText, props.loading, show]);
 
-    //printing Merge DOM and CSSOM to construct the render tree ...
+  //printing Merge DOM and CSSOM to construct the render tree ...
+  useEffect(() => {
+    if (props.loading && show == 7) {
+      setTimeout(type, typingDelay);
+      const timeout = setTimeout(() => {
+        setShow(8);
+        setCharIndex(0);
+        setlineText('');
+        setLineNumber(7);
+      }, newTextDelay)
+      return () => clearTimeout(timeout)
+    }
+  }, [lineText, props.loading, show]);
+
+  //printing Calculate layout and paint ...
+  useEffect(() => {
+    if (props.loading && show == 8) {
+      setTimeout(type, typingDelay);
+      const timeout = setTimeout(() => {
+        setShow(9);
+        setCharIndex(0);
+        setlineText('');
+        setLineNumber(8);
+      }, newTextDelay)
+      return () => clearTimeout(timeout)
+    }
+  }, [lineText, props.loading, show]);
+
+  //printing Done
+  useEffect(() => {
+    if (props.loading && show == 9) {
+      setTimeout(type, typingDelay);
+      const timeout = setTimeout(() => {
+        setShow(10);
+        setCharIndex(0);
+        setlineText('');
+        setLineNumber(9);
+      }, newTextDelay)
+      return () => clearTimeout(timeout)
+    }
+  }, [lineText, props.loading, show]);
+
+  //printing deleting
+  useEffect(() => {
+    if (props.loading && show == 10) {
+      setTimeout(type, typingDelay);
+      const timeout = setTimeout(() => {
+        setShow(11);
+        setLineNumber(10);
+      }, 200)
+      return () => clearTimeout(timeout)
+    }
+  }, [lineText, props.loading, show]);
+
+    //Delete Loading layer
     useEffect(() => {
-      if (props.loading && show == 7) {
-        setTimeout(type, typingDelay);
+      if (props.loading && show == 11) {
         const timeout = setTimeout(() => {
-          setShow(8);
-          setCharIndex(0);
-          setlineText('');
-          setLineNumber(7);
-        }, newTextDelay)
+          setLineNumber(11);
+          props.setOpenMainView(true);
+        }, 2500)
         return () => clearTimeout(timeout)
       }
     }, [lineText, props.loading, show]);
 
-        //printing Calculate layout and paint ...
-        useEffect(() => {
-          if (props.loading && show == 8) {
-            setTimeout(type, typingDelay);
-            const timeout = setTimeout(() => {
-              setShow(9);
-              setCharIndex(0);
-              setlineText('');
-              setLineNumber(8);
-            }, newTextDelay)
-            return () => clearTimeout(timeout)
-          }
-        }, [lineText, props.loading, show]);
-
-                //printing Done
-                useEffect(() => {
-                  if (props.loading && show == 9) {
-                    setTimeout(type, typingDelay);
-                    const timeout = setTimeout(() => {
-                      // setShow(10);
-                      // setCharIndex(0);
-                      // setlineText('');
-                      // setLineNumber(9);
-                    }, newTextDelay)
-                    return () => clearTimeout(timeout)
-                  }
-                }, [lineText, props.loading, show]);
 
   return (
-    <section className={`${styles.section} ${props.loading ? styles.loading : ''}`}>
+    <section className={`${styles.section} ${props.loading ? styles.loading : ''} ${ lineNumber > 9 ? styles.deleting : ''} ${ lineNumber > 10 ? styles.deleteLayer : ''}`}>
       {lineNumber > 0 && <p className={styles.text}>{textArray[0]}</p>}
       {lineNumber > 1 && <p className={styles.text}>{textArray[1]}</p>}
       {lineNumber > 2 && <p className={styles.text}>{textArray[2]}</p>}
@@ -193,7 +218,7 @@ export default function Loading(props: TLoading): ReactElement {
       {lineNumber > 5 && <p className={styles.text}>{textArray[5]}</p>}
       {lineNumber > 6 && <p className={styles.text}>{textArray[6]}</p>}
       {lineNumber > 7 && <p className={styles.text}>{textArray[7]}</p>}
-      {/* {lineNumber > 8 && <p className={styles.text}>Done</p>} */}
+      {lineNumber > 8 && <p className={styles.text}>{textArray[8]}</p>}
       <p className={styles.text}>{lineText}<span className={styles.cursor}>&nbsp;</span></p>
     </section>
   );

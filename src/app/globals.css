@@ -5,6 +5,10 @@
   --color-text-green: #cbfb83;
 
   --layer-of-matrix-text: 2;
+  --layer-of-header: 3;
+  /* --layer-up-content: 2;
+  --layer-of-popup: 4;
+  --layer-of-popup-components: 5; */
 }
 
 * {

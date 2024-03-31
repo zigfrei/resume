@@ -1,8 +1,7 @@
 .section {
-    position: relative;
+    position: absolute;
     width: 100dvw;
     height: 100dvh;
-    background-color: var(--color-black);
     overflow: hidden;
 }
 
@@ -61,6 +60,10 @@
     font-weight: 400;
     font-family: var(--font-handjet);
     padding-bottom: 30px;
+}
+
+.deleteMatrix {
+    display: none;
 }
 
 @media (max-width: 700px) {

@@ -1,6 +1,6 @@
 "use client"
 import styles from './Matrix.module.css';
-import { useEffect, Dispatch, ReactElement, SetStateAction } from "react";
+import { useEffect, Dispatch, ReactElement, SetStateAction, useState } from "react";
 
 type TMatrix = {
   loading: null | boolean;
@@ -66,6 +66,7 @@ export default function Matrix(props: TMatrix): ReactElement  {
   setInterval(matrix, 50);
 
   //Regular code
+  const [deleteMatrix, setDeleteMatrix] = useState(false);
 
   const handlePressAnyKey = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
     event.stopPropagation();
@@ -83,8 +84,17 @@ export default function Matrix(props: TMatrix): ReactElement  {
     };
   }, []);
 
+  useEffect(() => {
+    if (props.loading) {
+      const timeout = setTimeout(() => {
+        setDeleteMatrix(true);
+      }, 4000)
+      return () => clearTimeout(timeout)
+    }
+  }, [props.loading]);
+
   return (
-    <section className={styles.section}>
+    <section className={`${styles.section} ${deleteMatrix ? styles.deleteMatrix : ''}`} >
       <div className={`${styles.overlayWrapper} ${props.loading ? styles.loading : ''}`}>
         <canvas width="500" height="200" id="canv" />
         <div onClick={handlePressAnyKey} className={styles.overlay}>
