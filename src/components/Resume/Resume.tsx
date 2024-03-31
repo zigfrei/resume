@@ -63,7 +63,7 @@ export default function Resume() {
           </div>
 
           <div className={styles.contactPoint}>
-            <a className={`${styles.contactPointLink} ${styles.githubLinkHover}`} href="https://github.com/zigfrei" target="_blank">
+            <a className={styles.githubLinkHover} href="https://github.com/zigfrei" target="_blank">
               <svg width="30px" height="30px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg">
                 <title>Github button</title>
                 <defs>

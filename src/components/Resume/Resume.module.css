@@ -101,12 +101,15 @@
 .contactPointLink {
     all: unset;
     cursor: pointer;
-
 }
 
 .contactPointLink:hover svg {
     fill: #fffacd;
+}
 
+.githubLinkHover {
+    all: unset;
+    cursor: pointer;
 }
 
 .githubLinkHover:hover svg g g {
