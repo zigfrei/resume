@@ -68,6 +68,7 @@
     width: 100%;
     /* padding: 20px; */
     border: thick double var(--color-text-green);
+    margin-bottom: 30px;
 }
 
 .leftColumnWrapper {
@@ -105,7 +106,7 @@
 }
 
 .contactPointLink:hover svg {
-    fill: #fffacd;
+    fill: var(--color-lemon);
 }
 
 .githubLinkHover {
@@ -114,7 +115,7 @@
 }
 
 .githubLinkHover:hover svg g g {
-    fill: #fffacd;
+    fill: var(--color-lemon);
 }
 
 .contactPointText {
@@ -149,7 +150,7 @@
 }
 
 .rightColumnWrapper {
-    padding: 20px;
+    padding: 5px 20px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -167,7 +168,7 @@
 
 .subTitleInvert{
     margin: 5px 0;
-    padding: 0;
+    padding: 0 0 0 5px;
     text-align: left;
     font-style: normal;
     color: var(--color-black);
@@ -181,6 +182,8 @@
     margin: 0;
     padding: 0;
     text-wrap: balance;
+    width: 100%;
+    max-width: 150px;
     text-align: left;
     font-style: normal;
     color: var(--color-text-green);
@@ -207,4 +210,43 @@
     font-weight: 400;
     font-family: var(--font-handjet);
     text-shadow: var(--text-shadow-parametrs);
+}
+
+.skillsLanguagePoint {
+    /* padding: 5px 0; */
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.skillsTitleInvert {
+    margin: 15px 0;
+    padding: 0 0 0 5px;
+    text-align: left;
+    font-style: normal;
+    color: var(--color-black);
+    font-size: 28px;
+    font-weight: 400;
+    font-family: var(--font-handjet);
+    background-color: var(--color-text-green);
+}
+
+.titleMargin {
+    margin: 15px 0;
+}
+
+.experienceLink {
+    all: unset;
+    cursor: pointer;
+}
+
+.experienceLink:hover {
+    color: var(--color-lemon);
+}
+
+.hobbyWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
 }
