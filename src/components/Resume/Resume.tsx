@@ -8,6 +8,9 @@ import TelegramIcon from '../SVGIcons/TelegramIcon';
 import LinkedinIcon from '../SVGIcons/LinkedinIcon';
 import GitHubIcon from '../SVGIcons/GitHubIcon';
 import GameIcon from '../SVGIcons/GameIcon';
+import BookIcon from '../SVGIcons/BookIcon';
+import CookingIcon from '../SVGIcons/CookingIcon';
+import ForestIcon from '../SVGIcons/ForestIcon';
 
 export default function Resume() {
   const [open, setOpen] = useState<null | boolean>(false);
@@ -81,9 +84,9 @@ export default function Resume() {
 
           <h3 className={`${styles.commonTitle} ${styles.titleMargin}`}>Хобби</h3>
           <div className={styles.hobbyWrapper}>
-            <GymIcon /> <GameIcon />
+            <GymIcon /> <GameIcon /> <BookIcon /> <CookingIcon /> <ForestIcon />
           </div>
-          
+
 
         </div>
 
