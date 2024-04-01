@@ -14,6 +14,7 @@ const press_start_2P = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://revazashvili.vercel.app/'),
   title: "Домашняя страница Ревазашвили Георгия",
   description: "Добро пожаловать. Снова. Страница выполнена в стиле CRT monitor effect / terminal. Контент буду обновлять по мере возможности.",
 };
