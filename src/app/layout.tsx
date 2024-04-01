@@ -14,8 +14,8 @@ const press_start_2P = Press_Start_2P({
 });
 
 export const metadata: Metadata = {
-  title: "Резюме Ревазашвили Георгий",
-  description: "Ревазашвили Георгий фронтенд разаботчик",
+  title: "Домашняя страница Ревазашвили Георгия",
+  description: "Добро пожаловать. Снова. Страница выполнена в стиле CRT monitor effect / terminal. Контент буду обновлять по мере возможности.",
 };
 
 export default function RootLayout({

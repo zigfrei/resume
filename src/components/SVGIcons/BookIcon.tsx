@@ -2,7 +2,7 @@ export default function BookIcon() {
 	return (
 		<>
 			<svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
-				width="40px" height="40px" viewBox="0 0 64 64" enable-background="new 0 0 64 64" >
+				width="40px" height="40px" viewBox="0 0 64 64" enableBackground="new 0 0 64 64" >
 				<g>
 					<path fill="#fefea6" d="M31,7.663L2.516,0.067c-0.17-0.045-0.343-0.066-0.515-0.066c-0.437,0-0.866,0.142-1.22,0.413
 		C0.289,0.793,0,1.379,0,2v41.495l31,8.206V7.663z M24.43,40.274C24.304,40.714,23.903,41,23.469,41
