@@ -13,13 +13,16 @@ export default function Home() {
   return (
     <div className={`${styles.page} ${openMainView ? styles.pageFullHeight : ''}`}>
       <div className={styles.monitorCRTEffect} />
-      <Matrix loading={loading} setLoading={setLoading} />
-      <Loading loading={loading} setLoading={setLoading} setOpenMainView={setOpenMainView} />
+      {!openMainView && (
+        <>
+          <Matrix loading={loading} setLoading={setLoading} />
+          <Loading loading={loading} setLoading={setLoading} setOpenMainView={setOpenMainView} />
+        </>)}
       {openMainView && (<>
-      <Header />
-      <main className={styles.main}>
-        <Resume />
-      </main>
+        <Header />
+        <main className={styles.main}>
+          <Resume />
+        </main>
       </>)
       }
     </div>

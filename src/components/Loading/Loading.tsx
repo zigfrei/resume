@@ -207,6 +207,23 @@ export default function Loading(props: TLoading): ReactElement {
       }
     }, [lineText, props.loading, show]);
 
+    //skip animation
+    useEffect(() => {
+      if (props.loading) {
+      const keyDownHandler = (e: KeyboardEvent) => {
+        setLineNumber(11);
+        setShow(11);
+        props.setOpenMainView(true);
+      }
+    
+      document.addEventListener("keydown", keyDownHandler);
+  
+      // clean up
+      return () => {
+        document.removeEventListener("keydown", keyDownHandler);
+      };
+    }  
+    }, [props.loading]);
 
   return (
     <section className={`${styles.section} ${props.loading ? styles.loading : ''} ${ lineNumber > 9 ? styles.deleting : ''} ${ lineNumber > 10 ? styles.deleteLayer : ''}`}>

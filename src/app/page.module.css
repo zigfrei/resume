@@ -4,12 +4,10 @@
   width: 100dvw;
   height: 100dvh;
   background: var(--main-background-gradient);
-  /* overflow: hidden; */
   display: flex;
   flex-direction: column;
   align-items: center;
   /* animation: text-effect-glow  5s linear infinite; */
-  animation: screen-effects-module 10s linear infinite;
 }
 
 .monitorCRTEffect {
@@ -34,25 +32,3 @@
       color: #c6fc7e;
     }
     } */
-
-@keyframes screen-effects-module {
-  0% {
-    transform: skewX(0deg);
-  }
-
-  4% {
-    transform: skewX(0.7deg) scale(1.0001);
-  }
-
-  8% {
-    transform: skewX(0.2deg) skewY(-0.1deg);
-  }
-
-  16% {
-    transform: skewX(0.2deg);
-  }
-
-  50% {
-    transform: skewX(0.2deg);
-  }
-}
