@@ -34,44 +34,45 @@ export default function Resume() {
       <div className={styles.middleSection}>
         <div className={styles.leftColumnWrapper}>
           <h3 className={styles.commonTitle}>Контакты</h3>
-          <div className={styles.contactPoint}>
-            <MailIcon />
-            <div className={styles.contactPointText}>
-              <h4 className={styles.contactPointTitle}>Электронная почта</h4>
-              <h5 className={styles.contactPointSubTitle}>georgyrevazashvili@yandex.ru</h5>
+          <div className={styles.contactWrapper}>
+            <div className={styles.contactPoint}>
+              <MailIcon />
+              <div className={styles.contactPointText}>
+                <h4 className={styles.contactPointTitle}>Электронная почта</h4>
+                <h5 className={styles.contactPointSubTitle}>georgyrevazashvili@yandex.ru</h5>
+              </div>
+            </div>
+
+            <div className={styles.contactPoint}>
+              <a className={styles.contactPointLink} href="https://t.me/zigfrei" target="_blank">
+                <TelegramIcon />
+              </a>
+              <div className={styles.contactPointText}>
+                <h4 className={styles.contactPointTitle}>Telegram</h4>
+                <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="https://t.me/zigfrei" target="_blank">https://t.me/zigfrei</a></h5>
+              </div>
+            </div>
+
+            <div className={styles.contactPoint}>
+              <a className={styles.contactPointLink} href="https://linkedin.com/in/georgyrevazashvili" target="_blank">
+                <LinkedinIcon />
+              </a>
+              <div className={styles.contactPointText}>
+                <h4 className={styles.contactPointTitle}>LinkedIn</h4>
+                <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="linkedin.com/in/georgyrevazashvili" target="_blank">linkedin.com/in/georgyrevazashvili</a></h5>
+              </div>
+            </div>
+
+            <div className={styles.contactPoint}>
+              <a className={styles.githubLinkHover} href="https://github.com/zigfrei" target="_blank">
+                <GitHubIcon />
+              </a>
+              <div className={styles.contactPointText}>
+                <h4 className={styles.contactPointTitle}>GitHub</h4>
+                <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="https://github.com/zigfrei" target="_blank">https://github.com/zigfrei</a></h5>
+              </div>
             </div>
           </div>
-
-          <div className={styles.contactPoint}>
-            <a className={styles.contactPointLink} href="https://t.me/zigfrei" target="_blank">
-              <TelegramIcon />
-            </a>
-            <div className={styles.contactPointText}>
-              <h4 className={styles.contactPointTitle}>Telegram</h4>
-              <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="https://t.me/zigfrei" target="_blank">https://t.me/zigfrei</a></h5>
-            </div>
-          </div>
-
-          <div className={styles.contactPoint}>
-            <a className={styles.contactPointLink} href="https://linkedin.com/in/georgyrevazashvili" target="_blank">
-              <LinkedinIcon />
-            </a>
-            <div className={styles.contactPointText}>
-              <h4 className={styles.contactPointTitle}>LinkedIn</h4>
-              <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="linkedin.com/in/georgyrevazashvili" target="_blank">linkedin.com/in/georgyrevazashvili</a></h5>
-            </div>
-          </div>
-
-          <div className={styles.contactPoint}>
-            <a className={styles.githubLinkHover} href="https://github.com/zigfrei" target="_blank">
-              <GitHubIcon />
-            </a>
-            <div className={styles.contactPointText}>
-              <h4 className={styles.contactPointTitle}>GitHub</h4>
-              <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="https://github.com/zigfrei" target="_blank">https://github.com/zigfrei</a></h5>
-            </div>
-          </div>
-
           <h3 className={styles.commonTitle}>Навыки</h3>
           <h4 className={styles.skillsTitleInvert}>Знание языков</h4>
           <div className={styles.skillsLanguagePoint}>
@@ -179,6 +180,6 @@ export default function Resume() {
         </div>
       </div>
 
-    </section>
+    </section >
   );
 }
