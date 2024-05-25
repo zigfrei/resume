@@ -44,12 +44,12 @@ export default function Resume() {
             </div>
 
             <div className={styles.contactPoint}>
-              <a className={styles.contactPointLink} href="https://t.me/zigfrei" target="_blank">
+              <a className={styles.contactPointLink} href="https://t.me/georrg55" target="_blank">
                 <TelegramIcon />
               </a>
               <div className={styles.contactPointText}>
                 <h4 className={styles.contactPointTitle}>Telegram</h4>
-                <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="https://t.me/zigfrei" target="_blank">https://t.me/zigfrei</a></h5>
+                <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="https://t.me/georrg55" target="_blank">https://t.me/georrg55</a></h5>
               </div>
             </div>
 
@@ -80,7 +80,7 @@ export default function Resume() {
             <h5 className={styles.contactPointTitle}>Английский - B1 - Средний</h5>
           </div>
           <h4 className={styles.skillsTitleInvert}>Программирование</h4>
-          <h5 className={styles.contactPointTitle}>HTML, CSS, JavaScript, TypeScript, React.js, Redux Toolkit, Git, Next.js, Jest, Storybook
+          <h5 className={styles.contactPointTitle}>HTML, CSS, JavaScript, TypeScript, React.js, Next.js, Vue3, Nuxt3, Redux Toolkit, Git, Jest, Storybook
             Node.js, NestJS, SEO оптимизация, верстка писем HTML, jQuery</h5>
 
           <h3 className={`${styles.commonTitle} ${styles.titleMargin}`}>Хобби</h3>
@@ -115,8 +115,18 @@ export default function Resume() {
 
           <h3 className={`${styles.commonTitle} ${styles.titleMargin}`}>Опыт работы</h3>
           <h4 className={styles.subTitleInvert}>Коммерческий опыт</h4>
+
           <div className={styles.rowWrapper}>
-            <h4 className={styles.dateText}>Сентябрь 2023 — настоящее время</h4>
+            <h4 className={styles.dateText}>Апрель 2024 — настоящее время</h4>
+            <div className={styles.eduTextWrapper}>
+              <h5 className={styles.eduTextTitle}><a className={styles.experienceLink} href="https://www.switchcase.dev/" target="_blank">SwitchCase</a></h5>
+              <h5 className={styles.eduTextTitle}>Фронтенд разработчик</h5>
+              <h5 className={styles.eduTextTitle}>Верстка лэндингов на Nuxt 3, внесение правок и верстка на vue2</h5>
+            </div>
+          </div>
+
+          <div className={styles.rowWrapper}>
+            <h4 className={styles.dateText}>Сентябрь 2023 — Апрель 2024</h4>
             <div className={styles.eduTextWrapper}>
               <h5 className={styles.eduTextTitle}>Частная практика — фриланс</h5>
               <h5 className={styles.eduTextTitle}>Фронтенд / фулстек разработчик</h5>
@@ -126,6 +136,7 @@ export default function Resume() {
                 Устранение замечаний на сайте созданном на YII2: <a className={styles.experienceLink} href="https://makeuplab.by/" target="_blank">https://makeuplab.by/</a></h5>
             </div>
           </div>
+
           <div className={styles.rowWrapper}>
             <h4 className={styles.dateText}>Сентябрь 2023 — настоящее время</h4>
             <div className={styles.eduTextWrapper}>
