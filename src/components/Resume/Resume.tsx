@@ -59,7 +59,7 @@ export default function Resume() {
               </a>
               <div className={styles.contactPointText}>
                 <h4 className={styles.contactPointTitle}>LinkedIn</h4>
-                <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="linkedin.com/in/georgyrevazashvili" target="_blank">linkedin.com/in/georgyrevazashvili</a></h5>
+                <h5 className={styles.contactPointSubTitle}><a className={styles.experienceLink} href="https://linkedin.com/in/georgyrevazashvili" target="_blank">linkedin.com/in/georgyrevazashvili</a></h5>
               </div>
             </div>
 
